@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wizard's profile</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  body {
+    padding-top: 56px;
+    font-family: 'Papyrus';
+    background-image: url("assets/smallsparks.png");
+    color: #ffd700;
+    cursor: url("assets/goldensnitch.png"), auto;
+  }
+
+  .custom-navbar {
+    background-color: maroon;
+  }
+
+  .nav-link {
+      position: relative;
+      color: #FFD700;
+    }
+
+  .nav-link::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 2px;
+    width: 0;
+    background: gold;
+    transition: width 0.3s ease;
+    }
+
+  .nav-link:hover::after {
+    width: 100%;
+    }
+
+  .about-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+    color: #ffd700;
+  }
+
+  .aboutbody {
+    text-align: center;
+    font-size: 25px;
+    color: #ffd700;
+    font-family: 'Cinzel', serif;
+  }
+
+  .infotip {
+    text-align: center;
+    font-size: 15px;
+    color: #ffd700;
+    font-family: 'Cinzel', serif;
+  }
+
+  .profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  .center-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 180px;
+  }
+
+  .side img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.4s ease;
+    cursor: pointer;
+  }
+
+  .side img:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 20px gold);
+  }
+
+  .content-box {
+    background-color: beige;
+    color: brown;
+    padding: 40px;
+    border-radius: 10px;
+    width: 800px;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    font-family: 'Garamond';
+  }
+
+  .content-box p {
+    text-align: justify;
+    margin-bottom: 0;
+  }
+
+  .id-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .id-left {
+    width: 60%;
+  }
+
+  .id-right img {
+    width: 230px;
+    height: 270px;
+    object-fit: cover; 
+    border: 3px solid brown;
+    border-radius: 5px;
+  }
+
+  footer {
+    background-color: rgb(61, 47, 34);
+    color: #ffd700;
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Kia's Wizarding Web</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutme.html">Wizard's Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="myfamily.html">Wizard's Family</a></li>
+        <li class="nav-item"><a class="nav-link" href="mygallery.html">Wizard's Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="mycontact.html">Send an Owl</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-section">
+  <h1 class="about-title">Wizard's Profile</h1>
+  <div class="aboutbody"> Get to Know Me</div>
+  <div class="infotip"> (Hover the badges on the side!) </div>
+
+  <div class="profile-wrapper">
+
+      <div class="side">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <img src="assets/gryfbadge.png">
+        <br><br><br>
+        <img src="assets/ravbadge.png">
+      </div>
+
+      <div class="center-stack">
+      
+      <div class="content-box id-card">
+      <div class="id-left">
+      <h3><b>Hogwarts ID</b></h3><br>
+      <b>
+        Name: Kiana M. Yeo <br>
+        House: Hufflepuff <br>
+        Blood-status: Muggle born <br>
+        Wand: Willow, 14', Unicorn Hair core <br>
+        Patronous: Cat <br>
+        Year Level: 1
+        </b>
+      </div>
+
+  <div class="id-right">
+    <img src="assets/hogwartsid.png" alt="ID Picture">
+  </div>
+</div>
+
+
+      <div class="content-box">
+      <b>
+        <h4><b>Prompt 1: ChatGPT</b></h4>
+        Generate an image using rgb (14,26,64), make the dimension longer in size with (1920x1080 pixels) and add gold sparkles at both sides with little stars.
+        <br><br>
+        <h4><b>Prompt 2: ChatGPT</b></h4>
+        Generate an image using rgb (14,26,64), make the dimension longer in size with (1920x1080 pixels) and add smaller gold sparkles and fill the whole image with it.
+        <br><br>
+        <h4><b>Prompt 3: Gemini</b></h4>
+        Landscape view of the Hogwarts castle at night with dark exterior and illuminated windows, with a clear dark blue sky filled with stars and big greyish clouds. The atmosphere is dark, mysterious, and whimsical.
+        <br><br>
+        <h4><b>Prompt 4: ChatGPT</b></h4>
+        Landscape view of the interior of Hogwarts Train Express corridors, with cozy seats and warm lighting. The atmosphere is nice, no people, just empty.
+        <br><br>
+        <h4><b>Prompt 5: ChatGPT</b></h4>
+        Landscape view of the Great Hall in Hogwarts with high castle ceilings, candle chandeliers, warm lighting with banners of the four houses: red, blue, yellow, and green, on the side.
+        <br><br>
+        <h4><b>Prompt 6: ChatGPT</b></h4>
+        Change the background of this image to a Hogwarts background, change the clothing to a classic Hogwarts Hufflepuff uniform with a yellow tie. Make this look like an ID picture for Hogwarts. Make the facial features soft but make sure the face is very similar to the original picture.
+        <br><br>
+        <h4><b>Prompt 7: ChatGPT</b></h4>
+        Generate me a Gryffindor badge with maroon and gold colors, a Gryffindor title in a Harry Potter font style, and a lion emblem at the center.
+        <br><br>
+        <h4><b>Prompt 8: ChatGPT</b></h4>
+        Generate another one very similar to the previous image but for Ravenclaw, with dark blue and bronze colors, an eagle emblem at the center, and a Ravenclaw text.
+        <br><br>
+        <h4><b>Prompt 9: ChatGPT</b></h4>
+        Generate another one very similar to the previous image but for Slytherin, with emerald green and silver colors, a serpent emblem at the center, and a Slytherin text in a Harry Potter font style.
+        <br><br>
+        <h4><b>Prompt 10: ChatGPT</b></h4>
+        Generate another one very similar to the previous image but for Hufflepuff, with mustard yellow and black colors, a badger emblem at the center, and a Hufflepuff text in a Harry Potter font style.
+      </b>
+      </div>
+</div>
+
+      <div class="side">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <img src="assets/slybadge.png">
+        <br><br><br>
+        <img src="assets/huffbadge.png">
+      </div>
+
+  </div>
+</section>
+
+  <footer>
+  © Kiana M. Yeo 2025 | All Rights Reserved | Kia's Wizarding Web
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

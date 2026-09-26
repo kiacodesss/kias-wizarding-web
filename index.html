@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kia's wizarding web</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+        padding-top: 56px;
+        font-family: 'Cinzel';
+        background-color: rgb(14,26,64);
+        color: #FFD700;
+        cursor: url("assets/goldensnitch.png"), auto;
+    }
+
+    .custom-navbar {
+        background-color: maroon;
+    }
+
+    .nav-link {
+      position: relative;
+      color: #FFD700;
+    }
+
+    .nav-link::after{
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px;
+      width: 0;
+      background: gold;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .hero {
+        background-image: url("assets/bluesparks.png");
+        padding: 4rem 0;
+        text-align: center;
+        color: #FFD700;
+    }
+
+    .house-card {
+        transition: transform 0.3s ease, box-shadow 0.4s ease;
+        margin: 10px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-family: 'Cinzel', serif;;
+    }
+
+    .house-card:hover{
+        transform: translateY(-10px) scale(1.02);
+    }
+
+    #features {
+        background-image: url("assets/smallsparks.png");
+        padding: 3rem 0;
+        color: #FFD700;
+    }
+
+    .gryffindor {
+        border: 3px solid black;
+        background-color: maroon;
+        color: #FFD700;
+    }
+
+    .gryffindor:hover {
+        box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.9);
+        filter: drop-shadow(0 0 15px gold);
+    }
+
+    .ravenclaw {
+        border: 3px solid black ;
+        background-color: darkblue;
+        color: orange;
+    }
+
+    .ravenclaw:hover {
+        box-shadow: 0 0 25px 5px rgba(0, 150, 255, 0.7);
+        filter: drop-shadow(0 0 15px orange);
+    }
+
+    .slytherin {
+        border: 3px solid black;
+        background-color: darkgreen;
+        color: silver;
+    }
+
+    .slytherin:hover {
+        box-shadow: 0 0 25px 5px rgba(0, 255, 128, 0.7);
+        filter: drop-shadow(0 0 15px silver);
+    }
+
+    .hufflepuff {
+        border: 3px solid black;
+        background-color: #c39a1c;
+        color: black;
+    }
+
+    .hufflepuff:hover {
+        box-shadow: 0 0 25px 5px rgba(255, 255, 0, 0.9);
+        filter: drop-shadow(0 0 15px rgba(255, 255, 0, 0.9));
+    }
+
+    #gryffindorModal .modal-content {
+    background-color: maroon;
+    color: gold;
+    font-family: 'Cinzel', serif;
+    }
+
+    #ravenclawModal .modal-content {
+    background-color: darkblue;
+    color: orange;
+    font-family: 'Cinzel', serif;
+    }
+
+    #slytherinModal .modal-content {
+    background-color: darkgreen;
+    color: silver;
+    font-family: 'Cinzel', serif;
+    }
+
+    #hufflepuffModal .modal-content {
+    background-color: #c39a1c;
+    color: black;
+    font-family: 'Cinzel', serif;
+    }
+
+    .modal-header.gryffindor { background: maroon; color: gold; }
+    .modal-header.ravenclaw { background: darkblue; color: orange; }
+    .modal-header.slytherin { background: darkgreen; color: silver; }
+    .modal-header.hufflepuff { background: #c39a1c; color: black; }
+
+    footer {
+    background-color: rgb(61, 47, 34);
+    color: #ffd700;
+    padding: 10px;
+    margin-top: auto;
+    text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Kia's Wizarding Web</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutme.html">Wizard's Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="myfamily.html">Wizard's Family</a></li>
+            <li class="nav-item"><a class="nav-link" href="mygallery.html">Wizard's Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="mycontact.html">Send an Owl</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to My Personal Website</h1>
+      <p class="lead">A magical Harry Potter–themed website using Bootstrap and CSS.</p>
+    </div>
+  </section>
+
+
+<!-- CAROUSEL -->
+  <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/hogwarts 3.png" class="d-block w-100 h-10" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>A landscape view of Hogwarts at night.</h5>
+          <p>The British wizarding school located in the Scottish Highlands.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/train.png" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>An interior landscape view of the Hogwarts Express.</h5>
+          <p>The train that took students to Hogwarts on the 1st September.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/great hall.png" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>A landscape view of the Great Hall in Hogwarts</h5>
+          <p> This was Hogwarts' gathering place where students and teachers ate and congregated for events.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!--HOUSES CARDS-->
+  <section id="features" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4"><b>Guess Which Hogwarts House Do I Belong To?</b></h2>
+      <div class="row g-4">
+
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm house-card gryffindor"
+                data-bs-toggle="modal" data-bs-target="#gryffindorModal">
+            <img src="assets/gryffindor.png" class="card-img-top" alt="House 1">
+            <div class="card-body">
+              <h5 class="card-title"><b>Gryffindor House</b></h5>
+              <p class="card-text">Gryffindor was founded by Godric Gryffindor and favoured students who possessed characteristics such as courage, bravery and determination. The house colours were scarlet and gold, and the emblematic animal was a lion, which decorated the walls of the Gryffindor common room.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm house-card ravenclaw"
+                data-bs-toggle="modal" data-bs-target="#ravenclawModal">
+            <img src="assets/ravenclaw.png" class="card-img-top" alt="House 2">
+            <div class="card-body">
+              <h5 class="card-title"><b>Ravenclaw House</b></h5>
+              <p class="card-text">Home to prized students whose focus was on learning, wit and wisdom. This reflected the nature of their founder, Rowena Ravenclaw who was known to be a woman of remarkable diligence and intelligence. The Ravenclaw common room was decorated with the house colours of blue and bronze along with their eagle emblem.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm house-card slytherin"
+                data-bs-toggle="modal" data-bs-target="#slytherinModal">
+            <img src="assets/slytherin.png" class="card-img-top" alt="House 3">
+            <div class="card-body">
+              <h5 class="card-title"><b>Slytherin House</b></h5>
+              <p class="card-text">For students who valued ambition, leadership, self-preservation, cunning and resourcefulness and was founded by Salazar Slytherin. Its emblematic animal was the serpent, its representative gemstone was emeralds, and its colours were emerald green and silver.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card h-100 shadow-sm house-card hufflepuff"
+                data-bs-toggle="modal" data-bs-target="#hufflepuffModal">
+            <img src="assets/hufflepuff.png" class="card-img-top" alt="House 4">
+            <div class="card-body">
+              <h5 class="card-title"><b>Hufflepuff House</b></h5>
+              <p class="card-text">Founded by Helga Hufflepuff, Hufflepuff was the most inclusive among the four houses, valuing hard work, dedication, patience, loyalty, and fair play. Its emblematic animal was the badger, its representative gemstone was yellow diamonds, and yellow and black were its colours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--FEATURE MODALS-->
+ <div class="modal fade" id="gryffindorModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header gryffindor">
+          <h5 class="modal-title">Gryffindor House</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h3><center> WRONG! I'M NOT A GRYFFINDOR!</center></h3><br>
+          AI Tool: ChatGPT <br> <br>
+          Prompt: Generate me a Gryffindor Banner Flag showing the maroon and gold colors, the Gryffindor title in gold in a Harry Potter font style and a lion emblem at the back of the title in center. Make it landscape and long in width.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ravenclawModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header ravenclaw">
+          <h5 class="modal-title">Ravenclaw House</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h3><center> WRONG! I'M NOT A RAVENCLAW!</center></h3><br>
+          AI Tool: ChatGPT <br> <br>
+          Prompt: Generate me a Ravenclaw Banner Flag with dark blue and bronze colors, the Ravenclaw title in bronze in a Harry Potter font style and an eagle emblem at the back of the title in center. Make it landscape and long in width.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="slytherinModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header slytherin">
+          <h5 class="modal-title">Slytherin House</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h3><center> WRONG! I'M NOT A SLYTHERIN!</center></h3><br>
+          AI Tool: ChatGPT <br> <br>
+          Prompt: Generate me a Slytherin Banner Flag showing the emerald green and silver colors, the Slytherin title in silver in a Harry Potter font style and a serpent emblem at the back of the title in center. Make it landscape and long in width.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="hufflepuffModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header hufflepuff">
+          <h5 class="modal-title">Hufflepuff House</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h3><center> CORRECT! I'M A HUFFLEPUFF!</center></h3><br>
+          AI Tool: ChatGPT <br> <br>
+          Prompt: Generate me a Hufflepuff Banner Flag showing the mustard yellow and black colors, the Hufflepuff title in black in a Harry Potter font style and a badger emblem at the back of the title in center. Make it landscape and long in width.</div>
+      </div>
+    </div>
+  </div>
+
+ <!-- CONTACT MODAL -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--FOOTER-->
+  <footer>
+  © Kiana M. Yeo 2025 | All Rights Reserved | Kia's Wizarding Web
+</footer>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
