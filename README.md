@@ -9,6 +9,10 @@ This website was created to serve as my personal developer portfolio,
 highlighting my software and web development projects, technical skills,
 and Computer Science journey.
 
+### 🚀 Live Demo
+
+This website is live at: [View Website](https://kiacodesss.github.io/kias-wizarding-web/)
+
 ---
 
 ## 🛠️ Technologies
@@ -36,13 +40,8 @@ and Computer Science journey.
 
 ## 📸 Preview
 
-![Homepage](./assets/homepage.png)
-
----
-
-## 🚀 Live Demo
-
-[View Website](https://kiacodesss.github.io/kias-wizarding-web/)
+![Preview](./preview/homepage1.jpg)
+![Preview](./preview/homepage2.jpg)
 
 ---
 
@@ -65,7 +64,7 @@ and Computer Science journey.
 
 ## 🎓 Project Information
 
-Kia's Wizarding Web was developed as part of an academic project, demonstrating programming concepts and skills learned throughout the Introduction to Computing course using HTML, CSS, and Visual Studio Code.
+Kia's Wizarding Web was developed as part of an academic project, demonstrating programming concepts and skills learned throughout the Introduction to Computing course using HTML, CSS, Bootstrap, and Visual Studio Code.
 
 ## 📄 License
 
